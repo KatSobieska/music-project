@@ -121,6 +121,7 @@
       }
     }
   }
+
   .form-check-inline .form-check-input {
     ~ .#{$state}-feedback {
       margin-left: .5em;
@@ -135,6 +136,7 @@
       } @else if $state == "invalid" {
         z-index: 2;
       }
+
       &:focus {
         z-index: 3;
       }
