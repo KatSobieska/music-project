@@ -11,6 +11,7 @@ const app = {
         this.data.songs = parsedResponse;
       });
   },
+
   init: function () {
     const thisApp = this;
     thisApp.initData();
