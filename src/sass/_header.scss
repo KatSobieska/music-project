@@ -1,0 +1,12 @@
+.header {
+  position: relative;
+}
+.logo {
+  display: inline-block;
+  color: $color-light;
+
+  & img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
