@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .header_wrapper::after {
   content: '';
   opacity: 1;
@@ -26,11 +27,13 @@
   font-family: $font-global;
   text-transform: uppercase;
 }
+
 .logo_title {
   font-size: 180px;
   font-weight: 600;
   letter-spacing: 80px;
 }
+
 .logo_subtitle {
   font-size: 35px;
   font-weight: 400;
