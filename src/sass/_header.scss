@@ -45,11 +45,14 @@
   text-align: center;
 
   a {
-    color: $color-light;
+    color: silver;
     padding: 35px;
     font-family: $font-global;
     font-weight: 10;
     text-transform: uppercase;
     text-decoration: none;
+  }
+  a.active {
+    color: $color-light;
   }
 }
