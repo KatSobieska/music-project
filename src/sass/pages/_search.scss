@@ -13,4 +13,12 @@
   background: $background-color;
   border-bottom: 1px solid lighten($color-light, 70%);
   border-radius: 4px;
+  text-align: center;
+  color: $color-light;
+  font-family: $font-subscribe;
+}
+.search-title {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }
