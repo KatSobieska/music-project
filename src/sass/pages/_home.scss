@@ -1,0 +1,112 @@
+.home-wrapper {
+  margin: 0 auto;
+  background: $background-color;
+  border-bottom: 1px solid lighten($color-light, 70%);
+  border-radius: 4px;
+}
+
+.subscribe {
+  background-image: url('../images/subscribe.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  font-family: $font-subscribe;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  color: $color-light;
+  margin-top: -45px;
+  font-size: 75px;
+  left: 30%;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.music_bar {
+  color: $color-light;
+}
+
+.subscribe_container {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.btn {
+  width: 350px;
+  height: 50vh;
+}
+
+.btn a {
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  color: $color-light;
+  background-color: $color-main;
+  min-width: 160px;
+  margin: 350px auto 0 auto;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.author {
+  font-size: 70px;
+  font-weight: 900;
+  color: $color-light;
+  width: 300px;
+  height: 50vh;
+  text-align: right;
+}
+
+.author p {
+  margin-top: 270px;
+  letter-spacing: 12px;
+}
+
+.author_image {
+  width: 350px;
+  height: 50vh;
+}
+
+.author_image img {
+  width: 350px;
+  height: 50vh;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.author_image p {
+  position: absolute;
+  z-index: 2;
+  color: $color-main;
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 12px;
+  margin-top: -120px;
+  text-align: right;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: $color-light;
+  position: absolute;
+  top: 75%;
+  left: 59%;
+  letter-spacing: 5px;
+  font-size: 18px;
+}
+
+.album p {
+  margin-top: -10px;
+}
