@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MusicLand</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,31 +28,60 @@
             <a href="#discover">Discover</a>
         </div>
     </header>
-    <div class="music_bar">
-        <p>HERE YOU CAN LISTEN TO MUSIC</p>
+
+    <div id="pages">
+        <section id="home">
+            <div class="home-wrapper container"></div>
+        </section>
+        <section id="search">
+            <div class="search-wrapper container"></div>
+        </section>
+        <section id="discover">
+            <div class="discover-wrapper container"></div>
+        </section>
     </div>
-    <div class="subscribe">
-        <h2 class="title">Subscribe <span>now</span></h2>
-        <div class="container">
-            <div class="btn">
-                <a href="#join">join now</a>
+
+    <script id="template-home-page" type="text/x-handlebars-template">
+        <div class="wrapper">
+            <div class="music_bar">
+                <p>HERE YOU CAN LISTEN TO MUSIC</p>
             </div>
-            <div class="author">
-                <p>Dean Hen</p>
-            </div>
-            <div class="author_image">
-                <img src="../images/artist.jpg" alt="image">
-                <p>son</p>
-            </div>
+            <div class="subscribe">
+                <h2 class="title">Subscribe <span>now</span></h2>
+                <div class="subscribe_container">
+                    <div class="btn">
+                        <a href="#join">join now</a>
+                    </div>
+                    <div class="author">
+                        <p>Dean Hen</p>
+                    </div>
+                    <div class="author_image">
+                        <img src="../images/artist.jpg" alt="image">
+                        <p>son</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <h2>NEW ALBUM</h2>
+                    <p>Available only for subscribers</p>
+                </div>
+            </div>  
         </div>
-        <div class="album">
-            <h2>NEW ALBUM</h2>
-            <p>Available only for subscribers</p>
+    </script>
+    <script id="template-search-page" type="text/x-handlebars-template">
+        <div class="wrapper">
+            <p>SEARCH PAGE</p>
         </div>
+    </script>
+    <script id="template-discover-page" type="text/x-handlebars-template">
+    <div class="wrapper">
+        <p>DISCOVER PAGE</p>
     </div>
+</script>
+
     <footer class="footer">
         <p>All rights reserved</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/app.js" type="module"></script>
 </body>
 
