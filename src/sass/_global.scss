@@ -12,3 +12,7 @@ body {
 .container {
   margin: 0 auto;
 }
+
+.green-audio-player .slider .gap-progress .pin {
+  background-color: $color-main;
+}
