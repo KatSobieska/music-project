@@ -6,6 +6,7 @@ class Home {
     const thisHome = this;
 
     thisHome.render();
+    thisHome.initWidgets();
   }
 
   render() {
@@ -18,6 +19,13 @@ class Home {
     const homeContainer = document.querySelector(select.containerOf.home);
 
     homeContainer.appendChild(thisHome.element);
+  }
+
+  initWidgets() {
+    GreenAudioPlayer.init({
+      selector: '.player',
+      stopOthersOnPlay: true,
+    });
   }
 }
 export default Home;
