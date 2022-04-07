@@ -8,7 +8,6 @@
     <title>MusicLand</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@700&family=Lato:wght@900&family=Luxurious+Roman&family=Merriweather:ital@1&family=Montserrat:wght@100&family=Noto+Sans:wght@700&family=Playfair+Display:ital,wght@1,400;1,500&family=Quintessential&family=Roboto+Mono:wght@200&family=Roboto:wght@300&family=Source+Sans+Pro:wght@700&display=swap"
         rel="stylesheet">
@@ -18,10 +17,10 @@
 </head>
 
 <body>
-    <header class="row">
-        <div class="header_wrapper">
+    <header class="header">
+        <div class="header_wrapper row">
             <div class="logo">
-                <h1 class="logo_title"><span>Taste</span></h1>
+                <h1 class="logo_title">Taste</h1>
                 <h2 class="logo_subtitle">Engage<br> in<br> art</h2>
             </div>
         </div>
@@ -30,6 +29,7 @@
             <a href="#search">Search</a>
             <a href="#discover">Discover</a>
         </div>
+
     </header>
 
     <div id="pages">
@@ -52,7 +52,7 @@
             </div>
             <div class="ready-player player">
                 <audio>
-                    <source src="./songs/At_The_Top_David_Renda.mp3" type="audio/mpeg">
+                    <source src="./songs/{{filename}}" type="audio/mpeg">
                 </audio>
             </div>
             <div class="categories">
@@ -66,12 +66,13 @@
                     <div class="btn">
                         <a href="#join">join now</a>
                     </div>
-                    <div class="author">
-                        <p>Dean Hen</p>
+                    <div class="author-container">
+                        <div class="author">
+                            <p><span class ="author-name">Dean</span><br><span class="author-last-name">Hen</span><span class="son">son</span></p>
+                        </div>
                     </div>
                     <div class="author_image">
                         <img src="../images/artist.jpg" alt="image">
-                        <p>son</p>
                     </div>
                 </div>
                 <div class="album">
@@ -82,15 +83,30 @@
             </div>  
     </script>
     <script id="template-search-page" type="text/x-handlebars-template">
-        <div class="wrapper">
+        <div class="search-wrapper">
             <h1 class="search-title">Search</h1>
         </div>
     </script>
     <script id="template-discover-page" type="text/x-handlebars-template">
-    <div class="wrapper">
+    <div class="discover-wrapper">
         <h1 class="discover-title">Discover</h1>
         <h2 class="discover-subtitle">Give it a try!</h2>
+        <div class="music">
+        <div class="song-author">
+            <h3>{{ author }} - {{ title }}</h3>
+        </div>
+        <div class="ready-player player">
+            <audio>
+                <source src="./songs/{{filename}}" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="categories">
+            <h4>Categories: {{categories}} </h4>
+            <h4># {{ ranking }} in the ranking</h4>
+        </div>
+        </div>
     </div>
+    
 </script>
 
     <footer class="footer">
