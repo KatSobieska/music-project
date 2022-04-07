@@ -1,8 +1,15 @@
 .home-wrapper {
-  padding-top: 100px;
+  padding-top: 40px;
   background: $background-color;
   border-bottom: 1px solid lighten($color-light, 70%);
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.music {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .subscribe {
@@ -14,6 +21,7 @@
   justify-content: center;
   font-family: $font-subscribe;
   position: relative;
+  margin-top: 150px;
 }
 
 .title {
@@ -109,4 +117,27 @@
 
 .album p {
   margin-top: -10px;
+}
+
+.song-author {
+  color: white;
+  border: 1px solid white;
+  width: 400px;
+}
+audio {
+  color: white;
+}
+.categories {
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+.player {
+  text-align: center;
+  width: 400px;
+}
+.progress__pin::after {
+  color: $color-main;
 }
