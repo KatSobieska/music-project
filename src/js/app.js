@@ -48,6 +48,7 @@ const app = {
       );
     }
   },
+
   initData: function () {
     const url = settings.db.url + '/' + settings.db.songs;
     this.data = {};
