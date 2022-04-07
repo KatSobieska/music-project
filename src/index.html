@@ -8,14 +8,17 @@
     <title>MusicLand</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@700&family=Lato:wght@900&family=Luxurious+Roman&family=Merriweather:ital@1&family=Montserrat:wght@100&family=Noto+Sans:wght@700&family=Playfair+Display:ital,wght@1,400;1,500&family=Quintessential&family=Roboto+Mono:wght@200&family=Roboto:wght@300&family=Source+Sans+Pro:wght@700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
+    <header class="row">
         <div class="header_wrapper">
             <div class="logo">
                 <h1 class="logo_title"><span>Taste</span></h1>
@@ -42,6 +45,21 @@
     </div>
 
     <script id="template-home-page" type="text/x-handlebars-template">
+        <div class="home-wrapper">
+            <div class="music">
+            <div class="song-author">
+                <h3>{{ author }} - {{ title }}</h3>
+            </div>
+            <div class="ready-player player">
+                <audio>
+                    <source src="./songs/At_The_Top_David_Renda.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="categories">
+                <h4>Categories: {{categories}} </h4>
+                <h4># {{ ranking }} in the ranking</h4>
+            </div>
+        </div>
             <div class="subscribe">
                 <h2 class="title">Subscribe <span>now</span></h2>
                 <div class="subscribe_container">
@@ -61,6 +79,7 @@
                     <p>Available only for subscribers</p>
                 </div>
             </div>  
+            </div>  
     </script>
     <script id="template-search-page" type="text/x-handlebars-template">
         <div class="wrapper">
@@ -78,6 +97,7 @@
         <p>All rights reserved</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
     <script src="js/app.js" type="module"></script>
 </body>
 
