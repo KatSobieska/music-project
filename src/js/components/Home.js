@@ -22,6 +22,7 @@ class Home {
   }
 
   initWidgets() {
+    // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({
       selector: '.player',
       stopOthersOnPlay: true,
