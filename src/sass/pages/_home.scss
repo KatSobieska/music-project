@@ -1,11 +1,11 @@
 .home-wrapper {
   padding-top: 40px;
+  margin-bottom: 10px;
   background: $background-color;
-  border-bottom: 1px solid lighten($color-light, 70%);
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
 }
+
 .music {
   display: flex;
   align-items: center;
@@ -41,7 +41,6 @@
 .subscribe_container {
   display: flex;
   align-items: center;
-  max-width: 100%;
 }
 
 .btn {
@@ -65,20 +64,6 @@
   letter-spacing: 5px;
 }
 
-.author {
-  font-size: 70px;
-  font-weight: 900;
-  color: $color-light;
-  width: 300px;
-  height: 50vh;
-  text-align: right;
-}
-
-.author p {
-  margin-top: 270px;
-  letter-spacing: 12px;
-}
-
 .author_image {
   width: 350px;
   height: 50vh;
@@ -90,17 +75,29 @@
   object-fit: cover;
   position: relative;
   z-index: 1;
+  left: 45%;
 }
 
-.author_image p {
+.author {
+  margin: 0 auto;
+  color: $color-light;
+  font-size: 100px;
   position: absolute;
+  top: 35%;
+  left: 42%;
   z-index: 2;
-  color: $color-main;
-  font-size: 70px;
-  font-weight: 900;
   letter-spacing: 12px;
-  margin-top: -120px;
-  text-align: right;
+  font-weight: bold;
+}
+.author-name {
+  padding-right: 195px;
+}
+.author-last-name {
+  padding-left: 60px;
+}
+
+.son {
+  color: $color-main;
 }
 
 .album {
@@ -110,7 +107,7 @@
   color: $color-light;
   position: absolute;
   top: 75%;
-  left: 59%;
+  left: 55%;
   letter-spacing: 5px;
   font-size: 18px;
 }
@@ -121,23 +118,80 @@
 
 .song-author {
   color: white;
-  border: 1px solid white;
   width: 400px;
 }
+
 audio {
   color: white;
 }
+
 .categories {
   color: white;
-  border: 1px solid white;
   display: flex;
   justify-content: space-between;
   width: 400px;
 }
+
 .player {
   text-align: center;
   width: 400px;
 }
-.progress__pin::after {
-  color: $color-main;
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .title {
+    font-size: 48px;
+    margin-top: -25px;
+  }
+  .subscribe_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .author {
+    font-size: 60px;
+    left: 25%;
+  }
+  .author_image img {
+    width: 250px;
+    height: 40vh;
+    bottom: 40%;
+    left: 53%;
+  }
+  .album {
+    right: 14%;
+  }
+  .btn a {
+    margin: 200px auto 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+  .author {
+    font-size: 50px;
+    left: 2%;
+  }
+  .author_image img {
+    left: 33%;
+  }
+  .btn a {
+    margin: 150px auto 0 auto;
+  }
+  .title {
+    font-size: 48px;
+    margin-top: -25px;
+    left: 10%;
+  }
+  .song-author {
+    width: 350px;
+  }
+  .player {
+    width: 350px;
+  }
+  .categories {
+    width: 350px;
+  }
 }
