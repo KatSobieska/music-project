@@ -57,3 +57,24 @@
     color: $color-light;
   }
 }
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .logo_title {
+    font-size: 70px;
+    letter-spacing: 10px;
+  }
+  .logo_subtitle {
+    font-size: 25px;
+  }
+}
+
+@media (width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+  .logo_title {
+    font-size: 60px;
+  }
+}
