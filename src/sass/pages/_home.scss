@@ -75,7 +75,7 @@
   object-fit: cover;
   position: relative;
   z-index: 1;
-  left: 45%;
+  left: 35%;
 }
 
 .author {
@@ -89,9 +89,11 @@
   letter-spacing: 12px;
   font-weight: bold;
 }
+
 .author-name {
   padding-right: 195px;
 }
+
 .author-last-name {
   padding-left: 60px;
 }
@@ -141,27 +143,33 @@ audio {
   .container {
     max-width: 768px;
   }
+
   .title {
     font-size: 48px;
     margin-top: -25px;
   }
+
   .subscribe_container {
     display: flex;
     flex-direction: column;
   }
+
   .author {
     font-size: 60px;
     left: 25%;
   }
+
   .author_image img {
     width: 250px;
     height: 40vh;
     bottom: 40%;
     left: 53%;
   }
+
   .album {
     right: 14%;
   }
+
   .btn a {
     margin: 200px auto 0 auto;
   }
@@ -170,27 +178,34 @@ audio {
   .container {
     max-width: 576px;
   }
+
   .author {
     font-size: 50px;
     left: 2%;
   }
+
   .author_image img {
     left: 33%;
   }
+
   .btn a {
     margin: 150px auto 0 auto;
   }
+
   .title {
     font-size: 48px;
     margin-top: -25px;
     left: 10%;
   }
+
   .song-author {
     width: 350px;
   }
+
   .player {
     width: 350px;
   }
+
   .categories {
     width: 350px;
   }
