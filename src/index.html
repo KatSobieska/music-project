@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MusicLand</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="#">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@700&family=Lato:wght@900&family=Luxurious+Roman&family=Merriweather:ital@1&family=Montserrat:wght@100&family=Noto+Sans:wght@700&family=Playfair+Display:ital,wght@1,400;1,500&family=Quintessential&family=Roboto+Mono:wght@200&family=Roboto:wght@300&family=Source+Sans+Pro:wght@700&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+        href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -22,8 +23,8 @@
             <div class="logo">
                 <h1 class="logo_title">Taste</h1>
                 <h2 class="logo_subtitle">
-                    Engage<br />
-                    in<br />
+                    Engage<br>
+                    in<br>
                     art
                 </h2>
             </div>
@@ -49,19 +50,7 @@
 
     <script id="template-home-page" type="text/x-handlebars-template">
       <div class='home-wrapper'>
-        <div class='music'>
-          <div class='song-author'>
-            <h3>{{author}} - {{title}}</h3>
-          </div>
-          <div class='ready-player player'>
-            <audio>
-              <source src='./songs/{{filename}}' type='audio/mpeg' />
-            </audio>
-          </div>
-          <div class='categories'>
-            <h4>Categories: {{categories}} </h4>
-            <h4># {{ranking}} in the ranking</h4>
-          </div>
+        <div class='music-home'>
         </div>
         <div class='subscribe'>
           <h2 class='title'>Subscribe <span>now</span></h2>
@@ -87,6 +76,22 @@
         </div>
       </div>
     </script>
+    <script id="template-music-bar" type="text/x-handlebars-template">
+      <div class="song-wrapper">
+        <div class='song-author'>
+          <h3>{{author}} - {{title}}</h3>
+        </div>
+        <div class='ready-player player'>
+          <audio>
+            <source src='./songs/{{filename}}' type='audio/mpeg' />
+          </audio>
+        </div>
+        <div class='categories'>
+          <h4>Categories: {{categories}} </h4>
+          <h4># {{ranking}} in the ranking</h4>
+        </div>
+      </div>
+    </script>
     <script id="template-search-page" type="text/x-handlebars-template">
       <div class='search-wrapper'>
         <h1 class='search-title'>Search</h1>
@@ -96,19 +101,7 @@
       <div class='discover-wrapper'>
         <h1 class='discover-title'>Discover</h1>
         <h2 class='discover-subtitle'>Give it a try!</h2>
-        <div class='music'>
-          <div class='song-author'>
-            <h3>{{author}} - {{title}}</h3>
-          </div>
-          <div class='ready-player player'>
-            <audio>
-              <source src='./songs/{{filename}}' type='audio/mpeg' />
-            </audio>
-          </div>
-          <div class='categories'>
-            <h4>Categories: {{categories}} </h4>
-            <h4># {{ranking}} in the ranking</h4>
-          </div>
+        <div class='music-discover'>
         </div>
       </div>
     </script>
