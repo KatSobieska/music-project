@@ -14,11 +14,16 @@ export const select = {
     home: '.home-wrapper',
     search: '.search-wrapper',
     discover: '.discover-wrapper',
+    musicHome: '.music-home',
+    musicDiscover: '.music-discover',
+    musicSearch: '.music-search',
+
   },
   templateOf: {
     home: '#template-home-page',
     search: '#template-search-page',
     discover: '#template-discover-page',
+    musicBar: '#template-music-bar',
   },
   nav: {
     links: '.main-nav a',
@@ -43,5 +48,8 @@ export const templates = {
   ),
   home: Handlebars.compile(
     document.querySelector(select.templateOf.home).innerHTML
+  ),
+  musicBar: Handlebars.compile(
+    document.querySelector(select.templateOf.musicBar).innerHTML
   ),
 };
