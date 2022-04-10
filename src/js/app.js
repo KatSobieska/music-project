@@ -2,6 +2,7 @@ import { settings, select, classNames } from './settings.js';
 import Home from './components/Home.js';
 import Discover from './components/Discover.js';
 import Search from './components/Search.js';
+import SongWidget from './components/SongWidget.js';
 
 const app = {
   initPages: function () {
@@ -49,15 +50,40 @@ const app = {
     }
   },
 
+  initSong: function() {
+    const thisApp = this;
+
+    for (let songData in thisApp.data.songs){
+      new SongWidget(thisApp.data.songs[songData]);
+
+    }
+    thisApp.initWidgets();
+
+  },
+
+  initWidgets: function (){
+    GreenAudioPlayer.init({
+      selector: '.player', 
+      stopOthersOnPlay: true
+    });
+  },
+
+
   initData: function () {
+    const thisApp = this;
+
+    thisApp.data = {};
+
     const url = settings.db.url + '/' + settings.db.songs;
-    this.data = {};
+    
     fetch(url)
-      .then((rawResponse) => {
+      .then(function (rawResponse) {
         return rawResponse.json();
       })
-      .then((parsedResponse) => {
-        this.data.songs = parsedResponse;
+      .then(function (parsedResponse){
+        thisApp.data.songs = parsedResponse;
+
+        thisApp.initSong();
       });
   },
 
@@ -67,6 +93,7 @@ const app = {
     const homePage = document.querySelector(select.containerOf.home);
 
     thisApp.home = new Home(homePage);
+
   },
   initSearch: function () {
     const thisApp = this;
