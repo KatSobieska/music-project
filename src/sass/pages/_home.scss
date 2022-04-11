@@ -12,6 +12,26 @@
   flex-direction: column;
 }
 
+.categories-links {
+  display: flex;
+  flex-direction: row;
+  color: $color-light;
+}
+
+li {
+  display: inline-block;
+  margin-left: 3px;
+}
+
+li a {
+  text-decoration: none;
+  color: $color-light;
+}
+
+.selected {
+  color: $color-main;
+}
+
 .subscribe {
   background-image: url('../images/subscribe.jpg');
   height: 100vh;
@@ -43,12 +63,12 @@
   align-items: center;
 }
 
-.btn {
+.btn-home {
   width: 350px;
   height: 50vh;
 }
 
-.btn a {
+.btn-home a {
   display: inline-block;
   border-radius: 5px;
   text-align: center;
