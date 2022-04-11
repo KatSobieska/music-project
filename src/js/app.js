@@ -84,12 +84,12 @@ const app = {
     let i = 0;
 
     playerWrapper.forEach(element => {
-      element.classList.add('hide');
+      element.classList.add(classNames.elements.hidden);
 
       const songId = thisApp.data.songs[i].id;
 
       if(songId == randomNumber){
-        element.classList.remove('hide');
+        element.classList.remove(classNames.elements.hidden);
       }
 
       i++;
