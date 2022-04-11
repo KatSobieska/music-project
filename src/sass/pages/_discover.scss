@@ -1,7 +1,6 @@
 .discover-wrapper {
   margin: 50px auto;
   background: $background-color;
-  border-bottom: 1px solid lighten($color-light, 70%);
   border-radius: 4px;
   text-align: center;
   color: $color-light;
@@ -18,4 +17,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.hide {
+  display: none;
 }
