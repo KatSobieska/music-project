@@ -17,6 +17,7 @@ export const select = {
     musicHome: '.music-home',
     musicDiscover: '.music-discover',
     musicSearch: '.music-search',
+    categoriesContainer: '.categories-links .list'
 
   },
   templateOf: {
@@ -37,6 +38,11 @@ export const classNames = {
   nav: {
     active: 'active',
   },
+  elements: {
+    hidden: 'hide',
+    clicked: 'clicked',
+    selected: '.selected',
+  }
 };
 
 export const templates = {
