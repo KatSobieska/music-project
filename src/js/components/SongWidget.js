@@ -8,18 +8,30 @@ class SongWidget {
 
     thisSong.data = data;
 
-    thisSong.render(select.containerOf.musicHome);
-    thisSong.render(select.containerOf.musicDiscover);
+    thisSong.renderHome();
+    thisSong.renderDiscover();
   }
 
-  render (musicDiv){
+  renderHome (){
     const thisSong = this;
 
     const generatedHTML = templates.musicBar(thisSong.data);
 
     thisSong.element = utils.createDOMFromHTML(generatedHTML);
 
-    const singleSongContainer = document.querySelector(musicDiv);
+    const singleSongContainer = document.querySelector(select.containerOf.musicHome);
+
+    singleSongContainer.appendChild(thisSong.element);
+  }
+
+  renderDiscover (){
+    const thisSong = this;
+
+    const generatedHTML = templates.musicBar(thisSong.data);
+
+    thisSong.element = utils.createDOMFromHTML(generatedHTML);
+
+    const singleSongContainer = document.querySelector(select.containerOf.musicDiscover);
 
     singleSongContainer.appendChild(thisSong.element);
   }
