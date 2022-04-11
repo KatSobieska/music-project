@@ -8,6 +8,12 @@ utils.createDOMFromHTML = function (htmlString) {
   return div.firstChild;
 };
 
+utils.createDOMListFromHTML = function(htmlString) {
+  let list = document.createElement('li');
+  list.innerHTML = htmlString.trim();
+  return list;
+};
+
 utils.convertDataSourceToDbJson = function () {
   const productJson = [];
   for (let key in dataSource.products) {
