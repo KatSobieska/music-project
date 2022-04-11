@@ -50,12 +50,17 @@
 
     <script id="template-home-page" type="text/x-handlebars-template">
       <div class='home-wrapper'>
+        <div class="categories-links container">
+          <p>Categories:</p>
+          <ul class="list">
+          </ul>
+        </div>
         <div class='music-home'>
         </div>
         <div class='subscribe'>
           <h2 class='title'>Subscribe <span>now</span></h2>
           <div class='subscribe_container'>
-            <div class='btn'>
+            <div class='btn-home'>
               <a href='#join'>join now</a>
             </div>
             <div class='author-container'>
@@ -95,10 +100,28 @@
     <script id="template-search-page" type="text/x-handlebars-template">
       <div class='search-wrapper'>
         <h1 class='search-title'>Search</h1>
+        <div class="search-info container">
+          <div class="name-search">
+            <label for="search-id">Name</label>
+            <input type="search" id="search-id" class="search-input">
+          </div>
+          <div class="category-info">
+            <label for="category-id" class="">Category</label>
+            <select id="category-id" class="select-container">
+              <option selected value=""></option>
+            </select>
+          </div>
+        </div>
+        <div class="btn-search">
+          <a href="#search">Search</a>
+          </div>
+        <h2 class="result">We have found <span class="search-result"></span> songs...</h2>
+        <div class='music-search'>
+        </div>
       </div>
     </script>
     <script id="template-discover-page" type="text/x-handlebars-template">
-      <div class='discover-wrapper'>
+      <div class='discover-box'>
         <h1 class='discover-title'>Discover</h1>
         <h2 class='discover-subtitle'>Give it a try!</h2>
         <div class='music-discover'>
