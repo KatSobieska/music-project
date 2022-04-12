@@ -13,6 +13,10 @@ body {
   margin: 0 auto;
 }
 
+.song-wrapper {
+  font-family: $font-subscribe;
+}
+
 .green-audio-player .slider .gap-progress .pin {
   background-color: $color-main;
 }
