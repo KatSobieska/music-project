@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
 }
 
 .categories-links {
@@ -54,9 +55,6 @@ li a {
   letter-spacing: 7px;
 }
 
-.music_bar {
-  color: $color-light;
-}
 
 .subscribe_container {
   display: flex;
