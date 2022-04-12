@@ -48,3 +48,14 @@
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+
+.music-search {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
