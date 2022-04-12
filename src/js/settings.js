@@ -29,6 +29,9 @@ export const select = {
   nav: {
     links: '.main-nav a',
   },
+  button: {
+    searchButton: '#search a',
+  }
 };
 
 export const classNames = {
