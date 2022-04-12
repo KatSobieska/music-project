@@ -10,6 +10,7 @@ class SongWidget {
 
     thisSong.renderHome();
     thisSong.renderDiscover();
+    thisSong.renderSearch();
   }
 
   renderHome (){
@@ -32,6 +33,18 @@ class SongWidget {
     thisSong.element = utils.createDOMFromHTML(generatedHTML);
 
     const singleSongContainer = document.querySelector(select.containerOf.musicDiscover);
+
+    singleSongContainer.appendChild(thisSong.element);
+  }
+
+  renderSearch (){
+    const thisSong = this;
+
+    const generatedHTML = templates.musicBar(thisSong.data);
+
+    thisSong.element = utils.createDOMFromHTML(generatedHTML);
+
+    const singleSongContainer = document.querySelector(select.containerOf.musicSearch);
 
     singleSongContainer.appendChild(thisSong.element);
   }
