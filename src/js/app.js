@@ -75,25 +75,48 @@ const app = {
       new SongWidget(thisApp.data.songs[songData]);
     }
 
-    const playerWrapper = document.querySelectorAll('#discover .song-wrapper');  
+    const discoverPlayerWrapper = document.querySelectorAll('#discover .song-wrapper');  
+    const searchPlayerWrapper = document.querySelectorAll('#search .song-wrapper');  
 
-    console.log('thisDiscover.playerWrapper', playerWrapper);
-
-    let randomNumber = Math.floor(Math.random() * playerWrapper.length + 1);
+    let randomNumber = Math.floor(Math.random() * discoverPlayerWrapper.length + 1);
 
     let i = 0;
 
-    playerWrapper.forEach(element => {
+    discoverPlayerWrapper.forEach(element => {
       element.classList.add(classNames.elements.hidden);
 
       const songId = thisApp.data.songs[i].id;
+      
 
       if(songId == randomNumber){
         element.classList.remove(classNames.elements.hidden);
       }
 
       i++;
-    });    
+    });  
+
+    let u = 0;
+
+    searchPlayerWrapper.forEach(element => {
+      element.classList.add(classNames.elements.hidden);
+
+      const inputValue = document.querySelector('#search-id');
+
+      thisApp.searchButton = document.querySelector(select.button.searchButton);
+
+      thisApp.searchButton.addEventListener('click', function(event){
+        event.preventDefault();
+        console.log('click');
+        if(thisApp.data.songs[u].author.includes(inputValue.value) || thisApp.data.songs[u].title.includes(inputValue.value)){
+          element.classList.remove(classNames.elements.hidden);
+        }
+
+        u++;
+
+      });
+
+      
+    });
     
     thisApp.initWidget();
 
@@ -130,13 +153,10 @@ const app = {
       }
     }
 
-    console.log('allCategories', allCategories);
-
     for (let singleCategory of allCategories) {
       thisApp.categoryElement = utils.createDOMListFromHTML(
         '<a href="#" link-category="' + singleCategory + '">' + singleCategory + '</a>'
       );
-      console.log('thisHome.categoryElement', thisApp.categoryElement);
       thisApp.categoryContainer = document.querySelector(
         select.containerOf.categoriesContainer
       );
@@ -169,16 +189,12 @@ const app = {
     discoverContainer.appendChild(thisApp.element);
 
   },
-  
-
  
-
   init: function () {
     const thisApp = this;
     thisApp.initPages();
     thisApp.initData();
 
-    
   }
 };
 
