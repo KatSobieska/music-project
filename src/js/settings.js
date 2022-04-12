@@ -43,8 +43,7 @@ export const classNames = {
   },
   elements: {
     hidden: 'hide',
-    clicked: 'clicked',
-    selected: '.selected',
+    selected: 'selected',
   }
 };
 
