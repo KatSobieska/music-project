@@ -151,9 +151,6 @@ const app = {
       for (let category of data.categories) {
         if (!allCategories.includes(category)) {
           allCategories.push(category);
-        } else {
-          const idIndex = allCategories.indexOf(category);
-          allCategories.splice(idIndex, 0);
         }
       }
     }
